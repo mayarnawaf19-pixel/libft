@@ -6,7 +6,7 @@
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 10:51:59 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/15 11:27:08 by mabani-h         ###   ########.fr       */
+/*   Updated: 2026/09/18 12:07:21 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = 0;
 	else if (len > size - start)
 		len = size - start;
-	ptr = (char *) malloc (sizeof (char) * (len + 1));
+	ptr = malloc (sizeof (char) * (len + 1));
 	if (!ptr)
 		return (NULL);
 	i = 0;

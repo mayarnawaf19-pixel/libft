@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/10 12:43:08 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/16 11:43:16 by mabani-h         ###   ########.fr       */
+/*   Created: 2026/09/17 15:50:59 by mabani-h          #+#    #+#             */
+/*   Updated: 2026/09/18 10:39:29 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	src_len;
-	size_t	i;
+	t_list	*new_list;
+	t_list	*new_node;
+	void	*content;
 
-	src_len = ft_strlen(src);
-	if (dstsize == 0)
-		return (src_len);
-	i = 0;
-	while ((src[i] && i < (dstsize - 1)))
+	new_list = NULL;
+	while (lst)
 	{
-		dst[i] = src[i];
-		i++;
+		content = f (lst -> content);
+		new_node = ft_lstnew (content);
+		if (!new_node)
+		{
+			del (content);
+			ft_lstclear (&new_list, del);
+			return (NULL);
+		}
+		ft_lstadd_back (&new_list, new_node);
+		lst = lst -> next;
 	}
-	dst[i] = '\0';
-	return (src_len);
+	return (new_list);
 }

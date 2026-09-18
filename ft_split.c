@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/10 12:43:08 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/16 11:43:16 by mabani-h         ###   ########.fr       */
+/*   Created: 2026/09/16 10:19:55 by mabani-h          #+#    #+#             */
+/*   Updated: 2026/09/18 14:25:31 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+char	**ft_split(char const *s, char c)
 {
-	size_t	src_len;
-	size_t	i;
+	char	*ptr;
+	int		i;
+	int		count;
+	size_t	n;
 
-	src_len = ft_strlen(src);
-	if (dstsize == 0)
-		return (src_len);
 	i = 0;
-	while ((src[i] && i < (dstsize - 1)))
+	ptr = (char *) s;
+	n = ft_strlen(s);
+	while (s[i])
 	{
-		dst[i] = src[i];
+		if (ptr[i] == c)
+		{
+			ptr = malloc(n);
+			count++;
+		}
 		i++;
 	}
-	dst[i] = '\0';
-	return (src_len);
+	return (ptr);
 }

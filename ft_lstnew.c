@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/10 12:43:08 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/16 11:43:16 by mabani-h         ###   ########.fr       */
+/*   Created: 2026/09/17 13:45:46 by mabani-h          #+#    #+#             */
+/*   Updated: 2026/09/18 11:44:38 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+t_list	*ft_lstnew(void	*content)
 {
-	size_t	src_len;
-	size_t	i;
+	t_list	*node;
 
-	src_len = ft_strlen(src);
-	if (dstsize == 0)
-		return (src_len);
-	i = 0;
-	while ((src[i] && i < (dstsize - 1)))
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (src_len);
+	node = malloc (sizeof (t_list));
+	if (node == NULL)
+		return (NULL);
+	node -> content = content;
+	node -> next = NULL;
+	return (node);
 }

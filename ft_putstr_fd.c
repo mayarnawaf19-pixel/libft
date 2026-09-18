@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/10 12:43:08 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/16 11:43:16 by mabani-h         ###   ########.fr       */
+/*   Created: 2026/09/18 13:40:41 by mabani-h          #+#    #+#             */
+/*   Updated: 2026/09/18 13:42:51 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	src_len;
-	size_t	i;
-
-	src_len = ft_strlen(src);
-	if (dstsize == 0)
-		return (src_len);
-	i = 0;
-	while ((src[i] && i < (dstsize - 1)))
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (src_len);
+	if (!s)
+		return ;
+	while (*s)
+		write(fd, s++, 1);
 }

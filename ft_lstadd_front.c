@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/10 12:43:08 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/16 11:43:16 by mabani-h         ###   ########.fr       */
+/*   Created: 2026/09/17 14:11:23 by mabani-h          #+#    #+#             */
+/*   Updated: 2026/09/17 14:18:12 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "stdio.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	size_t	src_len;
-	size_t	i;
-
-	src_len = ft_strlen(src);
-	if (dstsize == 0)
-		return (src_len);
-	i = 0;
-	while ((src[i] && i < (dstsize - 1)))
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (src_len);
+	if (!lst || !new)
+		return ;
+	new -> next = *lst;
+	*lst = new;
 }

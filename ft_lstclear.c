@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/10 12:43:08 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/16 11:43:16 by mabani-h         ###   ########.fr       */
+/*   Created: 2026/09/17 15:13:17 by mabani-h          #+#    #+#             */
+/*   Updated: 2026/09/18 14:23:03 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	size_t	src_len;
-	size_t	i;
+	t_list	*temp;
 
-	src_len = ft_strlen(src);
-	if (dstsize == 0)
-		return (src_len);
-	i = 0;
-	while ((src[i] && i < (dstsize - 1)))
+	while (*lst)
 	{
-		dst[i] = src[i];
-		i++;
+		temp = (*lst)-> next;
+		del ((*lst)-> content);
+		free(*lst);
+		*lst = temp;
 	}
-	dst[i] = '\0';
-	return (src_len);
 }
