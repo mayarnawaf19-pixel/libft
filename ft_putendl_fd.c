@@ -6,9 +6,11 @@
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/18 13:43:13 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/18 14:24:21 by mabani-h         ###   ########.fr       */
+/*   Updated: 2026/09/19 14:24:42 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

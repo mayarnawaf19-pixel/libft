@@ -6,11 +6,11 @@
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 14:26:45 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/17 14:33:18 by mabani-h         ###   ########.fr       */
+/*   Updated: 2026/09/19 14:21:15 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
+#include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {

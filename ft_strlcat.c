@@ -6,13 +6,13 @@
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 12:53:35 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/15 10:22:53 by mabani-h         ###   ########.fr       */
+/*   Updated: 2026/09/19 14:26:57 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dessize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dst_len;
 	size_t	src_len;

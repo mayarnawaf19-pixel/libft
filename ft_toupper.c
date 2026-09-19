@@ -6,11 +6,10 @@
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 11:17:39 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/13 13:29:11 by mabani-h         ###   ########.fr       */
+/*   Updated: 2026/09/19 14:33:43 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 int	ft_toupper(int c)
@@ -19,5 +18,5 @@ int	ft_toupper(int c)
 	{
 		return (c - 32);
 	}
-	retuen (c);
+	return (c);
 }

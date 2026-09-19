@@ -6,11 +6,11 @@
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 08:07:51 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/13 12:18:54 by mabani-h         ###   ########.fr       */
+/*   Updated: 2026/09/19 13:52:06 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+#include "libft.h"
 
 void	*ft_calloc(size_t	count, size_t	size)
 {

@@ -6,9 +6,11 @@
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 15:13:17 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/18 14:23:03 by mabani-h         ###   ########.fr       */
+/*   Updated: 2026/09/19 14:20:34 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
