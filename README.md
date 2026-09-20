@@ -179,7 +179,7 @@ cc main.c libft.a -o program
 Then the compiled program can be executed with:
 
 ```bash
-./حقخلقشة
+./program
 ```
 
 ## Resources
