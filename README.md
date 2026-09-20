@@ -210,4 +210,4 @@ The main learning resources for the project were external tutorials and document
 
 ## Author
 
-42 Core Curriculum
+Mayar bani-hamad
