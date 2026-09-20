@@ -173,13 +173,13 @@ After building the library with `make`, it can be linked with a C program.
 For example:
 
 ```bash
-cc main.c libft.a -o program
+cc main.c libft.a -o libft.a
 ```
 
 Then the compiled program can be executed with:
 
 ```bash
-./program
+./libft.a
 ```
 
 ## Resources
