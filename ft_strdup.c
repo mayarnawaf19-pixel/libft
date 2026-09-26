@@ -6,7 +6,7 @@
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 08:13:39 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/15 10:20:23 by mabani-h         ###   ########.fr       */
+/*   Updated: 2026/09/25 11:10:27 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char	*s1)
 	size_t	len;
 
 	len = ft_strlen (s1);
-	copy = (char *) malloc (sizeof (char) * (len + 1));
+	copy = malloc (sizeof (char) * (len + 1));
 	if (!copy)
 	{
 		return (NULL);

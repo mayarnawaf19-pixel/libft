@@ -6,7 +6,7 @@
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 08:07:51 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/19 13:52:06 by mabani-h         ###   ########.fr       */
+/*   Updated: 2026/09/26 14:41:23 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_calloc(size_t	count, size_t	size)
 	size_t	total_size;
 
 	total_size = count * size;
-	if (count != 0 && total_size / count != size)
-		return (NULL);
 	ptr = malloc (total_size);
 	if (!ptr)
 		return (NULL);

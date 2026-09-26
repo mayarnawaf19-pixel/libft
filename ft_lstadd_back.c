@@ -6,7 +6,7 @@
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 14:33:59 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/18 14:11:49 by mabani-h         ###   ########.fr       */
+/*   Updated: 2026/09/22 14:13:19 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	last = ft_lstnew(*lst);
+	last = ft_lstlast(*lst);
 	last -> next = new;
 }

@@ -6,27 +6,31 @@
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 10:19:55 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/19 13:45:58 by mabani-h         ###   ########.fr       */
+/*   Updated: 2026/09/25 14:37:04 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static size_t	count_words(char const *s, char c)
 {
 	size_t	count;
+	int		in_word;
 
 	count = 0;
+	in_word = 0;
 	while (*s)
 	{
-		while (*s && *s == c)
-			s++;
-		if (*s && *s != c)
+		if (*s != c && in_word == 0)
 		{
+			in_word = 1;
 			count++;
-			while (*s && *s != c)
-				s++;
 		}
+		else if (*s == c)
+		{
+			in_word = 0;
+		}
+		s++;
 	}
 	return (count);
 }
@@ -50,7 +54,7 @@ static char	*copy_word(char const *s, char c)
 	len = 0;
 	while (s[len] && s[len] != c)
 		len++;
-	word = (char *)malloc(sizeof(char) * (len + 1));
+	word = malloc(sizeof(char) * (len + 1));
 	if (!word)
 		return (NULL);
 	i = 0;
@@ -95,7 +99,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	result = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
+	result = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!result)
 		return (NULL);
 	if (!fill_split(result, s, c))

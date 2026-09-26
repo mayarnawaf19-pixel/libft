@@ -6,7 +6,7 @@
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/18 13:40:41 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/18 13:42:51 by mabani-h         ###   ########.fr       */
+/*   Updated: 2026/09/26 14:27:10 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,12 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	int	i;
+
+	i = 0;
 	if (!s)
 		return ;
-	while (*s)
-		write(fd, s++, 1);
+	while (s[i] != '\0')
+		i++;
+	write (fd, s, i);
 }

@@ -6,7 +6,7 @@
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 09:37:08 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/15 10:30:45 by mabani-h         ###   ########.fr       */
+/*   Updated: 2026/09/25 12:59:13 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	len;
-	int		i;
+	size_t	i;
 
 	i = 0;
-	len = 0;
-	while (s[i])
+	while (s[i] != '\0')
 	{
-		len++;
+		i ++;
 	}
-	return (len);
+	return (i);
 }

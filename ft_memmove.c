@@ -6,7 +6,7 @@
 /*   By: mabani-h <mabani-h@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 11:13:30 by mabani-h          #+#    #+#             */
-/*   Updated: 2026/09/19 14:23:51 by mabani-h         ###   ########.fr       */
+/*   Updated: 2026/09/20 13:02:30 by mabani-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			d [i] = s [i];
 			i++;
 		}
-		return (dst);
 	}
+	return (dst);
 }
